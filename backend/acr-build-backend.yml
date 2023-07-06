@@ -38,12 +38,7 @@ stages:
           repository: backend_dev
           command: 'buildAndPush'
           Dockerfile: '**/api/Dockerfile'
-          tags: 'dev'
-<<<<<<< HEAD
-          
-=======
 
->>>>>>> dev
       - task: CopyPublishBuildArtifacts@1
         inputs:
           Contents: '**'
