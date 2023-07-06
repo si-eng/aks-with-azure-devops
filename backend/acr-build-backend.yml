@@ -11,7 +11,7 @@ stages:
           containerRegistry: 'sakcrsak.azurecr.io'
           repository: backend
           command: 'buildAndPush'
-          Dockerfile: '**/api/Dockerfile'
+          Dockerfile: '**/backend/Dockerfile'
           tags: |
             $(Build.BuildID)
             latest
