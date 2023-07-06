@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  console.log('working fine on production api')
+  console.log('working fine on api')
   res.send('testing staging api micro service ok woking fine still roll back');
 >>>>>>> dev
 });

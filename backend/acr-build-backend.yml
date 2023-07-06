@@ -8,10 +8,10 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'sakcrsak.azurecr.io'
+          containerRegistry: 'acr'
           repository: backend
           command: 'buildAndPush'
-          Dockerfile: '**/api/Dockerfile'
+          Dockerfile: '**/backend/Dockerfile'
           tags: |
             $(Build.BuildID)
             latest
@@ -34,12 +34,16 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'sakcrsak.azurecr.io'
+          containerRegistry: 'acr'
           repository: backend_dev
           command: 'buildAndPush'
+<<<<<<< HEAD
           Dockerfile: '**/api/Dockerfile'
           tags: 'dev'
           
+=======
+          Dockerfile: '**/backend/Dockerfile'
+>>>>>>> d88b049c5887bf77249ffb8c04609f1e3960efb1
 
       - task: CopyPublishBuildArtifacts@1
         inputs:
