@@ -10,6 +10,6 @@ COPY . .
 
 RUN npm install -g pm2
 
-EXPOSE 5000
+EXPOSE 4000
 
-CMD pm2 start index.js && tail -f /dev/null
+CMD pm2 start index.js && pm2 logs
