@@ -8,7 +8,7 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'sakcrsak.azurecr.io'
+          containerRegistry: 'acr'
           repository: backend
           command: 'buildAndPush'
           Dockerfile: '**/backend/Dockerfile'
@@ -34,10 +34,10 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'sakcrsak.azurecr.io'
+          containerRegistry: 'acr'
           repository: backend_dev
           command: 'buildAndPush'
-          Dockerfile: '**/api/Dockerfile'
+          Dockerfile: '**/backend/Dockerfile'
 
       - task: CopyPublishBuildArtifacts@1
         inputs:
