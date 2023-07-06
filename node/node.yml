@@ -17,7 +17,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: node
-        image: gsvikrant.azurecr.io/node:node
+        image: sakcrsak.azurecr.io/node:node
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

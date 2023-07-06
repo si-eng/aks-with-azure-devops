@@ -17,7 +17,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: backend
-        image: gsvikrant.azurecr.io/backend:dev
+        image: sakcrsak.azurecr.io/backend:dev
         imagePullPolicy: Always
         ports:
         - containerPort: 4000
